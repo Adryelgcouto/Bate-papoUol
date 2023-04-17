@@ -23,11 +23,11 @@
       <section id="listas">
         <div>
           <ul class="mensagens">
-            <li class="entrou">
+            <li class="entrou" data-test="message">
               <span class="clock">(09:22:28)</span>
               <strong>Adryel</strong> entra na sala...
             </li>
-            <li class="saiu">
+            <li class="saiu" data-test="message">
               <span class="clock">(09:22:28)</span> <strong>Adryel </strong> sai
               da sala...
             </li>
@@ -36,8 +36,12 @@
       </section>
     </main>
     <footer id="send">
-      <input type="text" placeholder="Escreva aqui..." />
-      <button onclick="enviarMensagem()">
+      <input
+        type="text"
+        placeholder="Escreva aqui..."
+        data-test="input-message"
+      />
+      <button data-test="send-message" onclick="enviarMensagem()">
         <ion-icon name="paper-plane-outline"></ion-icon>
       </button>
     </footer>
