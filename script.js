@@ -16,7 +16,6 @@ function pedirNome() {
       setInterval(atualizaStatus, 5000)
     })
   requisicao.catch(UsuarioErro)
-  MensagemServidor()
 }
 function atualizaStatus() {
   axios.post('https://mock-api.driven.com.br/api/vm/uol/status', nome)
@@ -24,15 +23,19 @@ function atualizaStatus() {
 }
 pedirNome()
 function MensagemServidor() {
+  const mensagem = document.querySelector('ul')
+  mensagem.innerHTML = ''
   axios
     .get('https://mock-api.driven.com.br/api/vm/uol/messages')
     .then(response => {
       response.data.forEach(({ from, to, text, type, time }) => {
-        const mensagem = document.querySelector('ul')
-        mensagem.innerHTML += ` 
-                      <li>
+        const elemento = document.createElement('li')
+        elemento.setAttribute('data-test', 'mensagem')
+        mensagem.appendChild(elemento)
+        elemento.scrollIntoView()
+        elemento.innerHTML += ` 
                       <span class="clock">${time}</span> <strong>${from}</strong> para <strong>${to}</strong>${text}
-                      </li>`
+                    `
       })
     })
 }
@@ -43,23 +46,18 @@ function UsuarioErro(erro) {
 function enviarMensagem() {
   const input = document.querySelector('input')
   const mensagemNova = {
-    from: '',
-    to: 'todos',
+    from: nome.name,
+    to: 'Todos',
     text: input.value,
     type: 'message'
   }
-  mensagens.push(mensagemNova)
   console.log(mensagemNova)
   // enviar uma requisição para o servidor
-  const requisicao = axios.post(
-    'https://mock-api.driven.com.br/api/vm/uol/messages',
-    mensagemNova
-  )
-  requisicao.then(requisicaoFuncionou)
-  requisicao.catch(requisicaoDeuErro)
-  console.log(requisicao)
-  console.log(mensagens)
-  renderizarMensagem()
+  const requisicao = axios
+    .post('https://mock-api.driven.com.br/api/vm/uol/messages', mensagemNova)
+    .then(response => {
+      console.log('certo')
+    })
 }
 function requisicaoFuncionou(funcionou) {
   console.log(funcionou)
