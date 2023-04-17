@@ -36,7 +36,7 @@ function MensagemServidor() {
         mensagem.appendChild(elemento)
         elemento.scrollIntoView()
         elemento.innerHTML += ` 
-                      <span class="clock">${time}</span> <strong>${from}</strong> para <strong>${to}</strong>${text}
+                      <span class="clock">(${time})</span> <strong>${from}</strong> para <strong>${to}</strong>${text}
                     `
       })
     })

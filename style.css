@@ -1,5 +1,6 @@
 * {
   font-family: 'Roboto', sans-serif;
+  box-sizing: border-box;
 }
 body {
   position: relative;
@@ -27,6 +28,7 @@ main {
   margin-top: 80px;
   height: 100%;
   margin-bottom: 80px;
+  background-color: #e5e5e5;
 }
 #listas {
   margin-top: 106px;
@@ -37,8 +39,6 @@ main {
   height: 40px;
   background-color: #ffffff;
   margin-bottom: 4px;
-  margin-left: 8px;
-  margin-right: 8px;
 }
 
 .clock {
@@ -89,4 +89,7 @@ button ion-icon {
 }
 button:hover {
   cursor: pointer;
+}
+span {
+  margin-left: 8px;
 }
