@@ -1,4 +1,4 @@
-*{
+* {
   font-family: 'Roboto', sans-serif;
 }
 body {
@@ -25,32 +25,32 @@ header > ion-icon {
 }
 main {
   margin-top: 80px;
-  height: 100vh;
+  height: 100%;
   margin-bottom: 80px;
 }
 #listas {
   margin-top: 106px;
 }
-#listas li{
+#listas li {
   display: flex;
   align-items: center;
   height: 40px;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   margin-bottom: 4px;
   margin-left: 8px;
   margin-right: 8px;
 }
 
-.clock{
-  color: #AAAAAA ;
+.clock {
+  color: #aaaaaa;
 }
-strong{
+strong {
   color: #000000;
   font-weight: bold;
   margin-left: 4px;
   margin-right: 4px;
 }
-footer{
+footer {
   position: fixed;
   bottom: 0;
   height: 80px;
@@ -58,34 +58,35 @@ footer{
   width: 100%;
   align-items: center;
   justify-content: space-between;
+  background-color: #ffffff1f;
 }
-footer input{
+footer input {
   height: 100%;
   width: 100%;
   border: none;
   padding-left: 17px;
   font-size: 18px;
   box-shadow: 0px -4px 6px rgba(0, 0, 0, 0.05);
+  background-color: #ffffff;
 }
 input:focus {
   outline: none;
   border: none;
 }
-footer input::-webkit-input-placeholder{
+footer input::-webkit-input-placeholder {
   color: #000000;
   font-style: italic;
-
 }
-button{
+button {
   height: 100%;
   display: flex;
   align-items: center;
   border: none;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
 }
-button ion-icon{
+button ion-icon {
   font-size: 36px;
 }
-button:hover{
+button:hover {
   cursor: pointer;
 }
