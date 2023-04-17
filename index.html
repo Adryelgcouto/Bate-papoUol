@@ -22,47 +22,28 @@
     <main>
       <section id="listas">
         <div>
-          <ul class="entrou">
-            <li>
+          <ul class="mensagens">
+            <li class="entrou">
               <span class="clock">(09:22:28)</span>
               <strong>Adryel</strong> entra na sala...
             </li>
-          </ul>
-        </div>
-        <div>
-          <ul class="mensagens">
-            <li>
-              <span class="clock">(09:22:28)</span> <strong>Adryel</strong> para
-              <strong>todos:</strong> Bom dia
-            </li>
-            <li>
-              <span class="clock">(09:22:28)</span> <strong>Adryel</strong> para
-              <strong>todos:</strong> Bom dia
-            </li>
-            <li>
-              <span class="clock">(09:22:28)</span> <strong>Adryel</strong> para
-              <strong>todos:</strong> Bom dia
-            </li>
-          </ul>
-        </div>
-        <div>
-          <ul>
-            <li>
+            <li class="saiu">
               <span class="clock">(09:22:28)</span> <strong>Adryel </strong> sai
               da sala...
             </li>
           </ul>
         </div>
       </section>
-      
     </main>
     <footer id="send">
-        <input type="text" placeholder="Escreva aqui..." />
-        <button><ion-icon name="paper-plane-outline"></ion-icon></button>
+      <input type="text" placeholder="Escreva aqui..." />
+      <button onclick="enviarMensagem()">
+        <ion-icon name="paper-plane-outline"></ion-icon>
+      </button>
     </footer>
 
     <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
-
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="./script.js"></script>
   </body>
 </html>
