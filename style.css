@@ -33,6 +33,7 @@ main {
   margin-top: 106px;
 }
 #listas li {
+  width: 100%;
   display: flex;
   align-items: center;
   height: 40px;
