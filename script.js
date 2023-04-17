@@ -30,7 +30,7 @@ function MensagemServidor() {
     .then(response => {
       response.data.forEach(({ from, to, text, type, time }) => {
         const elemento = document.createElement('li')
-        elemento.setAttribute('data-test', 'mensagem')
+        elemento.setAttribute('data-test', 'message')
         mensagem.appendChild(elemento)
         elemento.scrollIntoView()
         elemento.innerHTML += ` 
