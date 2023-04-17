@@ -26,10 +26,10 @@ function atualizaStatus() {
 pedirNome()
 function MensagemServidor() {
   const mensagem = document.querySelector('ul')
-  mensagem.innerHTML = ''
   axios
     .get('https://mock-api.driven.com.br/api/vm/uol/messages')
     .then(response => {
+      mensagem.innerHTML = ''
       response.data.forEach(({ from, to, text, type, time }) => {
         const elemento = document.createElement('li')
         elemento.setAttribute('data-test', 'message')
