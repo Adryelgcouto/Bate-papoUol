@@ -15,7 +15,9 @@ function pedirNome() {
       setInterval(MensagemServidor, 3000)
       setInterval(atualizaStatus, 5000)
     })
-  requisicao.catch(UsuarioErro)
+    .catch(erro => {
+      window.location.reload()
+    })
 }
 function atualizaStatus() {
   axios.post('https://mock-api.driven.com.br/api/vm/uol/status', nome)
@@ -39,10 +41,6 @@ function MensagemServidor() {
       })
     })
 }
-function UsuarioErro(erro) {
-  console.log('Deu erro')
-}
-
 function enviarMensagem() {
   const input = document.querySelector('input')
   const mensagemNova = {
@@ -57,10 +55,8 @@ function enviarMensagem() {
     .post('https://mock-api.driven.com.br/api/vm/uol/messages', mensagemNova)
     .then(response => {
       console.log('certo')
+      MensagemServidor()
     })
-}
-function requisicaoFuncionou(funcionou) {
-  console.log(funcionou)
 }
 function requisicaoDeuErro(erro) {
   console.log(erro)
