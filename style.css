@@ -1,0 +1,41 @@
+body {
+  position: relative;
+}
+header {
+  height: 80px;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.05);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+header > img {
+  margin-left: 22px;
+}
+header > ion-icon {
+  margin-right: 22px;
+  font-size: 45px;
+}
+main {
+  margin-top: 80px;
+}
+#listas {
+  margin-top: 106px;
+}
+#listas li{
+  display: flex;
+  align-items: center;
+  height: 40px;
+  background-color: burlywood;
+  margin-bottom: 4px;
+}
+strong{
+  color: #000000;
+  font-weight: bold;
+  margin-left: 4px;
+  margin-right: 4px;
+}
