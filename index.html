@@ -3,43 +3,63 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/reset.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/reset.css" />
+    <link rel="stylesheet" href="style.css" />
     <title>Document</title>
   </head>
   <body>
     <header>
-
-        <img src="/img/logo 1.png" alt="" />
-        <ion-icon name="people"></ion-icon>
+      <img src="/img/logo 1.png" alt="" />
+      <ion-icon name="people"></ion-icon>
     </header>
     <main>
       <section id="listas">
         <div>
           <ul class="entrou">
-            <li>(12:21:45) Adryel entra na sala...</li>
+            <li>
+              <span class="clock">(09:22:28)</span>
+              <strong>Adryel</strong> entra na sala...
+            </li>
           </ul>
         </div>
         <div>
           <ul class="mensagens">
-            <li><span class="clock">(09:22:28)</span> <strong>Adryel</strong> para <strong>todos:</strong> Bom dia</li>
-            <li><span class="clock">(09:22:28)</span> <strong>Adryel</strong>  para <strong>todos:</strong> Bom dia</li>
-            <li><span class="clock">(09:22:28)</span> <strong>Adryel</strong> para <strong>todos:</strong> Bom dia</li>
+            <li>
+              <span class="clock">(09:22:28)</span> <strong>Adryel</strong> para
+              <strong>todos:</strong> Bom dia
+            </li>
+            <li>
+              <span class="clock">(09:22:28)</span> <strong>Adryel</strong> para
+              <strong>todos:</strong> Bom dia
+            </li>
+            <li>
+              <span class="clock">(09:22:28)</span> <strong>Adryel</strong> para
+              <strong>todos:</strong> Bom dia
+            </li>
           </ul>
         </div>
-      <div>
-        <ul>
-          <li><span class="clock">(09:22:28)</span> <strong>Adryel </strong> sai da sala...</li>
-        </ul>
-      </div>
+        <div>
+          <ul>
+            <li>
+              <span class="clock">(09:22:28)</span> <strong>Adryel </strong> sai
+              da sala...
+            </li>
+          </ul>
+        </div>
       </section>
-      <section id="send">
-        <input type="text" placeholder="Escreva aqui...">
-        <button><ion-icon name="paper-plane-outline"></ion-icon></button>
-      </section>
+      
     </main>
-
+    <footer id="send">
+        <input type="text" placeholder="Escreva aqui..." />
+        <button><ion-icon name="paper-plane-outline"></ion-icon></button>
+    </footer>
 
     <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
 
