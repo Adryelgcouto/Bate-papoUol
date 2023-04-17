@@ -7,15 +7,20 @@ let nome = {
 //nome do Usuario
 function pedirNome() {
   const nomeDoUsuario = prompt('Qual o seu nome')
-  const enviarDoUsuario = (nome.name = nomeDoUsuario)
+  nome.name = nomeDoUsuario
   console.log(nome)
   const requisicao = axios
     .post('https://mock-api.driven.com.br/api/vm/uol/participants', nome)
     .then(response => {
       setInterval(MensagemServidor, 3000)
+      setInterval(atualizaStatus, 5000)
     })
   requisicao.catch(UsuarioErro)
   MensagemServidor()
+}
+function atualizaStatus() {
+  axios.post('https://mock-api.driven.com.br/api/vm/uol/status', nome)
+  console.log('Atualizando 5s')
 }
 pedirNome()
 function MensagemServidor() {
