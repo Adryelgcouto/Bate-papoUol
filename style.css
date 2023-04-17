@@ -23,6 +23,9 @@ header > ion-icon {
   margin-right: 22px;
   font-size: 45px;
 }
+ul {
+  padding-inline-start: 0px;
+}
 main {
   margin-top: 80px;
   height: 100%;
